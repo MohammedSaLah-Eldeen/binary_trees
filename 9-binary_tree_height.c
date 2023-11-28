@@ -6,7 +6,7 @@
 *
 * Return: the depth of the node
 */
-size_t get_depth(binary_tree_t *node)
+size_t get_depth(const binary_tree_t *node)
 {
 size_t depth = 0;
 binray_tree_t *temp = node;
