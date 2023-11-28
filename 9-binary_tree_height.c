@@ -9,7 +9,7 @@
 size_t get_depth(const binary_tree_t *node)
 {
 size_t depth = 0;
-binray_tree_t *temp = node;
+const binary_tree_t *temp = node;
 while (temp)
 {
 depth++;
@@ -29,12 +29,13 @@ return (depth);
 */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
+size_t depth, left_depth, right_depth;
 if (tree == NULL)
 return (0);
 
 depth = get_depth(tree);
-left_depth = binary_tree_height(tree.left);
-right_depth = binary_tree_height(tree.right);
+left_depth = binary_tree_height(tree->left);
+right_depth = binary_tree_height(tree->right);
 
 if (depth < left_depth)
 depth = left_depth;
